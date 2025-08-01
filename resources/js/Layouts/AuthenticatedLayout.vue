@@ -39,6 +39,9 @@ const showingNavigationDropdown = ref(false);
                                 >
                                     Dashboard
                                 </NavLink>
+                                <NavLink :href="route('aprs.index')" :active="route().current('aprs.index')">
+                                    APR's
+                                </NavLink>
                             </div>
                         </div>
 
