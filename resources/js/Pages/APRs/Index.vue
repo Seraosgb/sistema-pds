@@ -108,7 +108,9 @@ const formatDate = (dateString) => {
                                         </td>
                                         <td class="px-6 py-4 text-right">
                                             <Link :href="route('aprs.show', apr.id)" class="font-medium text-green-600 hover:underline">Ver <br></Link>
-                                            <Link :href="route('aprs.edit', apr.id)" class="font-medium text-blue-600 hover:underline"> Editar</Link>
+                                            <Link :href="route('aprs.edit', apr.id)" class="font-medium text-blue-600 hover:underline"> Editar<br></Link>
+                                            <!--<a :href="route('aprs.pdf', apr.id)" target="_blank" class="font-medium text-purple-600 hover:underline">PDF</a> -->
+                                            <!--<a :href="route('aprs.excel', apr.id)" class="font-medium text-teal-600 hover:underline">Excel</a> -->
                                             <button @click="confirmDeletion(apr)" class="font-medium text-red-600 hover:underline">Excluir</button>                                  
                                         </td>
                                     </tr>

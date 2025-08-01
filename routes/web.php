@@ -9,6 +9,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\APRController;
+use App\Http\Controllers\APRReportController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -29,6 +30,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/aprs/{apr}/pdf', [APRReportController::class, 'exportToPdf'])->name('aprs.pdf');// Rota para exportar APR para PDF
+    Route::get('/aprs/{apr}/excel', [APRReportController::class, 'exportToExcel'])->name('aprs.excel');// Rota para exportar APR para Excel
+
 
     // Esta única linha cria todas as rotas necessárias para o CRUD de APRs.
     Route::resource('aprs', APRController::class);

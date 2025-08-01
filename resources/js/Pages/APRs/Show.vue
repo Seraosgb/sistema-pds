@@ -32,15 +32,17 @@ const formatDate = (dateString) => {
                                 &larr; Voltar para a Lista
                             </Link>
                             <div class="space-x-2">
-                                <a :href="route('aprs.pdf', apr.id)" target="_blank" class="inline-flex items-center px-4 py-2 bg-green-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-green-500 active:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition ease-in-out duration-150">
+                                <a :href="route('aprs.pdf', apr.id)" target="_blank" class="inline-flex items-center px-4 py-2 bg-purple-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-purple-500 active:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition ease-in-out duration-150">
                                     Gerar PDF
+                                </a>
+                                <a :href="route('aprs.excel', apr.id)" class="inline-flex items-center px-4 py-2 bg-green-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-green-500 active:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition ease-in-out duration-150">
+                                    Gerar Excel
                                 </a>
                                 <Link :href="route('aprs.edit', apr.id)" class="inline-flex items-center px-4 py-2 bg-blue-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-500 active:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition ease-in-out duration-150">
                                     Editar
                                 </Link>
                             </div>
                         </div>
-
                         <!-- Seção 1: Dados Gerais -->
                         <section>
                             <h3 class="text-lg font-medium text-gray-900 border-b pb-2 mb-4">Dados Gerais</h3>
